@@ -30,16 +30,14 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
-app.use(cors({
-  origin: function (origin, callback) {
-    const allowedOrigins = ['http://localhost:3000','https://vibecircle.rohithreddy.site/'];
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS policy violation'));
-    }
-  }
-}));
+const corsOptions = {
+  origin: ['https://vibecircle.rohithreddy.site', 'http://localhost:3000'],
+};
+
+app.use(cors(corsOptions));
+
+
+// app.use(cors())
 
 
 
