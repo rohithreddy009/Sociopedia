@@ -30,11 +30,11 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
-// const corsOptions = {
-//   origin: ['https://sociopedia.rohithreddy.site', 'http://localhost:3000', 'https://sociopedia9.vercel.app/'],
-// };
+const corsOptions = {
+  origin: ['https://sociopedia.rohithreddy.site', 'http://localhost:3000', 'https://sociopedia9.vercel.app/'],
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
