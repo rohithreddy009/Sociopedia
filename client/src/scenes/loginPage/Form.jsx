@@ -64,7 +64,6 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      "https://mernsocialmediaapp-production.up.railway.app/auth/register",
       {
         method: "POST",
         body: formData,
