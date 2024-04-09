@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { setFriends } from "state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
+import { BACKEND_URL } from "config";
 
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://mernsocialmediaapp-production.up.railway.app/users/${_id}/${friendId}`,
+      `${BACKEND_URL}/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
