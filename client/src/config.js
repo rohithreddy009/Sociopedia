@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://sociopediabackend.rohithreddy.site"
+export const BACKEND_URL = "https://sociopediabackend.rohithreddy.dev"
