@@ -31,7 +31,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 const corsOptions = {
-  origin: ['https://sociopedia.rohithreddy.site', 'http://localhost:3000', 'https://sociopedia9.vercel.app', 'https://sociopedia-backup.rohithreddy.site'],
+  origin: ['https://sociopedia.rohithreddy.site', 'http://localhost:3000', 'https://sociopedia9.vercel.app', 'https://sociopedia-backup.rohithreddy.site', 'https://sociopedia.rohithreddy.dev'],
 };
 
 app.use(cors(corsOptions));
